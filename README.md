@@ -3,40 +3,59 @@
 This project is a React application with authentication and a home page. It uses `react-router-dom` for routing, `axios` for HTTP requests, and `context` API for state management.
 
 # Project Structure
+auth-app/
 
-frontend/
+├── backend/
 
-├── public/
+│   ├── config/
 
-├── index.html
+│   │   └── db.js
 
-├── src/
+│   ├── models/
 
-│ ├── components/
+│   │   └── User.js
 
-│ │ ├── Auth/
+│   ├── routes/
 
-│ │ │ ├── Login.js
+│   │   └── auth.js
 
-│ │ │ ├── Register.js
+│   ├── .env
 
-│ │ ├── Home.js
+│ ├── server.js
 
-│ ├── context/
+├── frontend/
 
-│ │ ├── AuthContext.js
+│├── public/
 
-│ ├── App.js
+││├── index.html
 
-│ ├── index.js
+│├── src/
 
-│ ├── index.css
+││├── components/
 
-│ ├── reportWebVitals.js
+│││├── Auth/
 
-├── .env
+││││├── Login.js
 
-├── package.json
+││││├── Register.js
+
+│││├── Home.js
+
+││├── context/
+
+│││├── AuthContext.js
+
+││├── App.js
+
+││├── index.js
+
+││├── index.css
+
+││├── reportWebVitals.js
+
+│├── .env
+
+│├── package.json
 
 # Setup Instructions
 
