@@ -49,7 +49,8 @@ Step 2: Clone the Repository
 Clone the repository to your local machine:
 
  git clone https://github.com/sivaramjeychand/Quantum_Pioneers
- cd auth-home-app/frontend
+ 
+ cd Quantum-Pioneers/frontend
 
 Step 3: Install Dependencies 
  npm install
