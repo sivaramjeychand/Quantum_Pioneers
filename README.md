@@ -1,93 +1,54 @@
-# Authentication Page & Home
+# Quantum Pioneers
 
-This project is a React application with authentication and a home page. It uses `react-router-dom` for routing, `axios` for HTTP requests, and `context` API for state management.
+## Project Description
 
-# Project Structure
-auth-app/
+**Quantum Pioneers** is an innovative web application designed to transform the way physics is taught and learned. Targeting educators and students alike, it offers virtual physics experiments and teaching tools, making advanced scientific exploration accessible to all, particularly those who may lack the resources for real-life lab setups. This platform includes built-in experiments, customizable experiments, lesson planning capabilities, and a community forum for lively discussion and knowledge exchange.
 
-├── backend/
+### Project Scope
 
-│   ├── config/
+The main goal of Quantum Pioneers is to make physics more approachable and comprehensible through interactive simulations that cover a wide range of physics topics from classical mechanics to quantum physics.
 
-│   │   └── db.js
+### Motivation
 
-│   ├── models/
+Physics, the fundamental science behind the natural world, often presents learning challenges due to its abstract concepts and mathematical nature. Quantum Pioneers seeks to make physics more accessible, engaging, and comprehensible through the use of interactive technologies. By leveraging virtual labs and simulations, the project aims to transform the learning experience, making it more interactive and stimulating. Community collaboration pages allow users to share knowledge and learn from one another, fostering a deeper interest and curiosity in the subject.
 
-│   │   └── User.js
+### Aim
 
-│   ├── routes/
+The primary aim is to develop a comprehensive platform that offers interactive simulations, virtual labs, and a collaborative environment for learners and educators to explore and teach physics concepts ranging from classical mechanics to quantum physics. By achieving these goals, Quantum Pioneers seeks to bridge the gap between theoretical physics and practical experimentation, providing a rich, immersive learning experience that is both educational and inspiring.
 
-│   │   └── auth.js
+## Project Structure
 
-│   ├── .env
+The Quantum Pioneers project is structured into several main directories:
 
-│ ├── server.js
+- **/backend**: Contains the server-side code, using Node.js and Express for API services and interaction with a MongoDB database.
+- **/frontend**: Hosts the React application that provides the user interface for conducting simulations and accessing other platform features.
+- **/common**: Includes shared utilities and resources used by both the backend and frontend components.
 
-├── frontend/
+Each subfolder is designed to encapsulate specific aspects of the application, ensuring modularity and ease of maintenance.
 
-│├── public/
+## Setup Instructions
 
-││├── index.html
+To get started with Quantum Pioneers, follow these steps:
 
-│├── src/
-
-││├── components/
-
-│││├── Auth/
-
-││││├── Login.js
-
-││││├── Register.js
-
-│││├── Home.js
-
-││├── context/
-
-│││├── AuthContext.js
-
-││├── App.js
-
-││├── index.js
-
-││├── index.css
-
-││├── reportWebVitals.js
-
-│├── .env
-
-│├── package.json
-
-# Setup Instructions
-
-**Following the steps below you would be directed to an empty page due to some issues which have yet to fix.** 
-
-Step 1: Install Node.js
-Ensure that you have Node.js installed. If not, download and install it from [Node.js official website](https://nodejs.org/).
-
-Step 2: Clone the Repository
-Clone the repository to your local machine:
-```
-git clone https://github.com/sivaramjeychand/Quantum_Pioneers
-cd Quantum-Pioneers/frontend
-```
-Step 3: Install Dependencies 
-````
-npm install
-````
-Step 4: Environment Variables
-
- Create a .env file in the root directory of the backend and add the following content:
-````
-MONGO_URI=mongodb://localhost:27017/mydatabase
-JWT_SECRET=mysecret
-````
-Step 5: Start the Backend Server
-````
-cd backend
-node server.js
-````
-Step 6: Start the Frontend Development Server
- ````
-cd frontend
-npm start
-````
+1. **Clone the Repository**
+   ```bash
+   git clone [repository-url]
+   cd Quantum_Pioneers-master
+   ```
+2. **Setup Backend**
+   ```bash
+   npm run update-backend
+   ```
+   Start the backend server:
+   ```bash
+   npm run start-backend
+   ```
+3. **Setup Frontend**
+   ```bash
+   npm run update-frontend
+   ```
+   Start the backend server:
+   ```bash
+   npm run start-frontend
+   ```
+   This will start the frontend development server and open the application in your default web browser.
