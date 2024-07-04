@@ -4,9 +4,8 @@ const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { check, validationResult } = require('express-validator');
-const auth = require('../middleware/auth'); // Create a middleware for auth
+const auth = require('../middleware/auth');
 
-// Register new user
 router.post(
     '/register',
     [
@@ -19,9 +18,6 @@ router.post(
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-
-        console.log('register');
-        console.log(req.body);
 
         const { name, email, password } = req.body;
 
@@ -65,7 +61,6 @@ router.post(
     }
 );
 
-// Authenticate user & get token
 router.post(
     '/login',
     [
@@ -77,9 +72,6 @@ router.post(
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-
-        console.log('login');
-        console.log(req.body);
 
         const { email, password } = req.body;
 
@@ -118,10 +110,10 @@ router.post(
     }
 );
 
-// Get user info
 router.get('/', auth, async (req, res) => {
     try {
         const user = await User.findById(req.user.id).select('-password');
+
         if (!user) {
             return res.status(404).json({ msg: 'User not found' });
         }

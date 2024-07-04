@@ -31,7 +31,7 @@ const Register = () => {
             if (value.length < 4 || value.length > 20) {
                 nameErrors.push("Name must have a length of between 4 and 20 characters");
             }
-            if (value.includes("'")) {
+            if (value.includes("'") || value.includes('"')) {
                 nameErrors.push("Name must not contain apostrophes");
             }
             errors.name = nameErrors.join('<br />');
@@ -52,6 +52,9 @@ const Register = () => {
             if (!/\W/.test(value)) {
                 passwordErrors.push("Password must contain at least one special character");
             }
+            if (value.includes("'") || value.includes('"')) {
+                passwordErrors.push("Password must not contain apostrophes");
+            }
             errors.password = passwordErrors.join('<br />');
         } else if (name === 'password2') {
             errors.password2 = value === formData.password ? '' : "Doesn't match password";
@@ -71,6 +74,7 @@ const Register = () => {
     
         if (formData.password !== formData.password2) {
             toast.error('Passwords do not match');
+            setFormData(prevData => ({ ...prevData, password2: '' }));
             return;
         }
     

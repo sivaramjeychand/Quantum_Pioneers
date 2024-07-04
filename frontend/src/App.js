@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import Dashboard from './components/Dashboard';
+import Simulations from './components/Simulations'
 import Home from './components/Home'; // Assuming there's a Home component
 import PrivateRoute from './components/PrivateRoute';
 import { AuthProvider } from './context/AuthContext';
@@ -17,6 +18,7 @@ const App = () => {
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/dashboard" element={<PrivateRoute element={Dashboard} />} />
+                    <Route path="/simulations" element={<PrivateRoute element={Simulations} />} />
                     {/* Redirect all other routes to home */}
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
